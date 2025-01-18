@@ -2,22 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>goit-js-hw-11</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <div class="container">
+        <div class="search-wrapper">
+          <form class="search-form js-search-form">
+            <input
+              class="search-input js-search-input"
+              type="text"
+              placeholder="Search images.."
+              name="user_query"
+              required
+            />
+            <button class="search-btn">Search</button>
+          </form>
+        </div>
+        <!-- Галерея для зображень -->
+        <ul class="gallery js-gallery"></ul>
+
+        <!-- Індикатор завантаження -->
+        <div class="loader js-loader" style="display: none"></div>
+
+        <h1 class="main-title">
+          <span class="main-title-gradient">Welcome</span> to main page
+        </h1>
+      </div>
     </main>
-
-    <load src="./partials/footer.html" />
-
     <script type="module" src="./main.js"></script>
   </body>
 </html>
